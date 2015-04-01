@@ -1,0 +1,37 @@
+.profile-edit,.passwd-edit{
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding:10px;
+	background-color: #eee;
+	margin-top: 5%;
+	border-radius: 5px;
+}
+.profile-edit{width: 60%;}
+.passwd-edit{width: 25%;}
+
+.profile-control{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left:5px;
+	width: 300px;
+}
+
+.form-layout span{
+	display: inline-block;
+	max-height: 100%;max-width: 100%;
+	margin-left: 5px;
+	padding:5px;
+	vertical-align: top;
+}
+
+.form-layout i{
+	font-size: 20px;
+}
+.ph-btngroup span:first-of-type{
+	margin-left: 45px;
+}
+
+.error-container{padding: 3px; padding-left: 2em;font-size: 12px;}
+.error-text{font-size: 14px !important;}

@@ -1,0 +1,60 @@
+/**html,body{margin: 0;padding:0;width: 100%;height: 100%;}
+
+#left-pane{height: 100%;background-color: #4AEDA8;font-size: 16px;}
+#right-pane{height: 100%;background-color: #3D3D3D;font-size: 16px;}
+#login-section,#signup-section{max-width: 60%;height:100%;display: block;margin-left: auto;margin-right: auto;}
+@media screen and (min-width:768px){
+  #login-section,#signup-section{margin-top: 25%;}
+  .panel main{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+  }
+}
+div.form-layout:last-of-type{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+#left-pane div.form-layout:last-of-type{color: #777;}
+#right-pane div.form-layout:last-of-type{color: #fff;}
+
+
+.signup-control{background-color: #666; color:#fff;}
+.btn-login{background-color: #FFD032; font-size: 14px; color:#666;}
+.btn-signup{background-color: #FF2A60; font-size: 14px; color:#fff;}**/
+.ph-container-fluid{padding-left: 0 !important; padding-right: 0 !important;}
+.pichub-menubar{background-color: #242424;margin-bottom: 0 !important; border: 1px solid #242424;border-radius: 0;}
+.ph-jumbotron{
+  background-image: url('/asset/jumbo.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  margin: 0;
+  max-width: 100%;
+  border-radius: 0 !important;
+  height: 450px;font-size: 18px;
+
+}
+.jumbotron h1{font-size: 2.8em; font-weight: 600;text-align: center;}
+.jumbotron h3{font-size: 2em; text-align: center;}
+.jumbotron a:link{text-decoration: none; color:#444; text-align: center;display: block; font-size: .9em;margin-bottom: 5px;}
+.btn-phStart,.btn-explore{width: 250px;color: #DBD6D6 !important; padding-top: 10px;padding-bottom: 10px; margin-left: auto;margin-right: auto;}
+.tagline-row{margin-bottom: 3.5em;}
+.tagline{text-align: center;}
+.tagline span{font-size: 1.5em;}
+.tagline small{font-size:1.2em;}
+
+.feature{border:2px solid #666; font-size: 20px; height: 230px;margin:10px;padding-top: 10px;background-color: #F4F4F4;}
+.feature:first-of-type{margin-left: 9em;}
+.i-follow{color: #5DFF42;}
+.i-upload{color:#FF4312;}
+.i-share{color:#273DED;}
+.feature i{font-size: 4em;text-align: center; display: block;}
+.feature h3{font-size: 1.5em;margin-top:0; text-align: center;}
+.feature p{font-size: 1em;}
+
+.getStart{background-color: #67D3ED ; padding-top: 18px; padding-bottom: 25px;}
+.getStart h1{text-align: center;}

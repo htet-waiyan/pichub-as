@@ -1,0 +1,25 @@
+{
+  "name": "PicHub-AS",
+  "version": "0.1.0",
+  "description": "Authentication server for pichub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htet-waiyan/pichub-as.git"
+  },
+  "keywords": [
+    "pichub-as"
+  ],
+  "author": "Weiyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/htet-waiyan/pichub-as/issues"
+  },
+  "homepage": "https://github.com/htet-waiyan/pichub-as",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

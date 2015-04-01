@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pichub">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/asset/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/view/styles/home.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="navbar navbar-default pichub-menubar">
+      <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" href="#/">Pichub</a></div>
+        <ul class="nav navbar-nav">
+          <li><a class="menu" href="#"><i class="fa fa-sign-in"></i> Login</a></li>
+          <li><a class="menu" href="#"><i class="fa fa-user-plus"></i> Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-fluid ph-container-fluid" ng-view></div>
+
+
+  <!-- <div class="container full-height">
+      <div class="layout full-height">
+        <section class="panel m-width-100 d-width-50" id="left-pane" ng-controller="LoginCtrl as ctrl">
+          <main>
+            <form name="form" novalidate>
+              <div class="form-layout error-pane" ng-show="errMsg">{{errMsg}}</div>
+              <div class="form-layout">
+                <input type="email" ng-model="formData.email" name="email" class="control" placeholder="Enter email"/>
+              </div>
+              <div class="form-layout"><input type="password" ng-model="formData.passwd" name="passwd" class="control" placeholder="Enter password"></div>
+              <div class="form-layout"><button type="button" ng-click="ctrl.submit()" class="control btn btn-login">Login</button></div>
+              <div class="form-layout"><a href="#">Forget password?</a></div>
+              <div class="form-layout"><span>Haven't has an account? Register now!</span></div>
+            </form>
+          </main>
+        </section>
+        <section class="panel m-width-100 d-width-50" id="right-pane" ng-controller="SignupCtrl as ctrl">
+          <main>
+            <form name="signupForm" novalidate>
+              <div class="form-layout info-pane" ng-show="successMsg">{{successMsg}}</div>
+
+              <div class="form-layout">
+                <span class="error-text" ng-show="!signupForm.fullname.$pristine && signupForm.fullname.$error.required">Fullname is required.</span>
+                <input type="text" name="username" ng-model="formData.username" class="control signup-control" placeholder="Enter fullname" required/>
+              </div>
+
+
+              <div class="form-layout">
+                <span class="error-text" ng-show="!signupForm.email.$pristine && signupForm.email.$error.required">Email is required.</span>
+                <span class="error-text" ng-show="!signupForm.email.$pristine && signupForm.email.$invalid">Invalid email address.</span>
+                <input type="email" name="email" ng-model="formData.email" class="control signup-control" placeholder="Enter email" required/>
+              </div>
+
+
+              <div class="form-layout">
+                <span class="error-text" ng-show="!signupForm.passwd.$pristine && signupForm.passwd.$error.required">Password is required.</span>
+                <input type="password" name="passwd" ng-model="formData.passwd" class="control signup-control" placeholder="Enter password" required>
+              </div>
+
+
+              <div class="form-layout"><button type="submit" ng-click="ctrl.submit()" class="control btn btn-signup">Register</button></div>
+              <div class="form-layout"><span>Already have an account? Login Me!</span></div>
+            </form>
+          </main>
+        </section>
+      </div>
+    </div>-->
+
+    <script type="text/javascript" src="/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/app/main.js"></script>
+    <script type="text/javascript" src="/app/service/service.admin.js"></script>
+    <script type="text/javascript" src="/app/controllers/admin/controller.admin.js"></script>
+    <script type="text/javascript" src="/app/config/index.js"></script>
+  </body>

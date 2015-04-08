@@ -1,6 +1,7 @@
 var path=require('path');
 var bodyParser=require('body-parser');
 var express=require('express');
+var handlebars=require('express-handlebars');
 
 module.exports=function(app){
   var rootPath=path.normalize(__dirname+'/../..');

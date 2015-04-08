@@ -1,6 +1,16 @@
 module.exports={
-  connection:'mongodb://localhost:27017/pichub-dev',
   app:{
     PORT:2000
+  },
+  DB:{
+    connection:'mongodb://localhost:27017/pichub-dev',
+    dbname:'pichub-dev',
+    port:'',
+    ip:'',
+    host:'',
+    index:{
+      unique_email:'email_unique_idx',
+      unique_username:'username_unique_idx'
+    }
   }
 }

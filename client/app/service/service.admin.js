@@ -8,7 +8,7 @@
       var defered=$q.defer();
 
       $http({
-        url:"/api/signup",
+        url:"/signup/submit",
         method:"POST",
         data:JSON.stringify(user)
       }).success(function(data,status,config){
@@ -24,7 +24,7 @@
       var defered=$q.defer();
 
       $http({
-        url:'/api/login',
+        url:'/login/submit',
         method:'POST',
         data:JSON.stringify(credential)
       }).success(function(data,status,config){

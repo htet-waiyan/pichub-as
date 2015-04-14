@@ -7,6 +7,8 @@ module.exports=function(app){
   var rootPath=path.normalize(__dirname+'/../..');
   var routePath=path.join(rootPath,'/client/view');
 
+  console.log(rootPath);
+  console.log(routePath);
   app.set('appRoot',rootPath);
   app.set('routePath',{root:routePath});
 

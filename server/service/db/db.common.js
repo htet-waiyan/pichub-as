@@ -1,6 +1,5 @@
 var MongoClient=require('mongodb').MongoClient;
 var ObjectId=require('mongodb').ObjectID;
-var handleError=require('./../error/');
 var dbConnecitonFactory=require('./db.confactory').getDBConFactory();
 
 var db=dbConnecitonFactory.getDBInstance();
@@ -32,7 +31,6 @@ CommonDB.prototype.insert=function(data,option,callback){
 
     col.insert(data,_option,function(err,result){
       if(err){
-        console.log(err.err);
         return callback(err,null,null,null);
       }
 

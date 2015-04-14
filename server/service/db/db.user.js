@@ -55,8 +55,6 @@ UserDB.prototype.createUser=function(user,callback){
   var createIndex=this.createIndex;
   this.insert(user,{w:1},function(err,dbUser,db,col){
     if(err){
-      console.log(typeof err.code);
-      console.log(err.code);
       return callback(err,null);
     }
 

@@ -1,9 +1,9 @@
 (function(w){
   var pichub=w.pichubApp;
 
-  function CommonController($scope){
+  function HomeController($scope){
   	$scope.test="hello";
   }
 
-  pichub.controller('CommonController',['$scope',CommonController]);
+  pichub.controller('HomeController',['$scope',HomeController]);
 })(window);

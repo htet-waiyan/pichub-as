@@ -1,7 +1,7 @@
 (function(w){
   var pichubApp=w.pichubApp;
 
-  var AdminController=function($scope,$window,$adminService){
+  var AdminController=function($scope,$http,$window,$adminService){
     $scope.loginForm={};
     $scope.signupForm={};
 
@@ -23,17 +23,21 @@
 
     /*** post form submit for signup ***/
     this.submitLogin=function($invalid){
+      //console.log($http.defaults.headers);
+      ///
       $adminService.doLogin($scope.loginForm)
         .then(function(user){
           console.log("Login Successsful");
-          $window.location.href="http://localhost:3000"
-          console.log(user);
+          return $adminService.sendKeyforCookie(user._id);
         },function(err){
           console.log("Login failed");
           $scope.errMsg=err.msg;
+        }).then(function(resp){
+            //$window.location.href="http://localhost:3000"
+            console.log(resp.cookie);
         })
     }
   }
 
-  pichubApp.controller('AdminController',['$scope','$window','adminService',AdminController]);
+  pichubApp.controller('AdminController',['$scope','$http','$window','adminService',AdminController]);
 })(window);

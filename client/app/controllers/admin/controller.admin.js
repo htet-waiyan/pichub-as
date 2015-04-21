@@ -28,13 +28,12 @@
       $adminService.doLogin($scope.loginForm)
         .then(function(user){
           console.log("Login Successsful");
-          return $adminService.sendKeyforCookie(user._id);
+          //return $adminService.sendKeyforCookie(user._id);
         },function(err){
           console.log("Login failed");
           $scope.errMsg=err.msg;
         }).then(function(resp){
-            //$window.location.href="http://localhost:3000"
-            console.log(resp.cookie);
+          $window.location.href="http://localhost:3000"
         })
     }
   }

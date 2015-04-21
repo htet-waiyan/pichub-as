@@ -6,6 +6,7 @@ module.exports=function(app){
   app.route('/')
       .get(function(req,res,next){
         console.log("Getting index file");
+        res.cookie('test-cookie','dummy cookie value');
         res.sendFile('index.html',app.get('routePath'));
       })
 
@@ -19,6 +20,7 @@ module.exports=function(app){
   app.route('/landing/login')
       .get(function(req,res,next){
         res.status(200);
+        res.set("Access-Control-Allow-Origin","http://localhost:2000");
         res.sendFile('templates/landing/login.html',app.get('routePath'));
       });
 

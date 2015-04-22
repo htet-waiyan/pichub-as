@@ -4,13 +4,10 @@
       <div class="form-group">
         <div class="alert alert-danger" role="alert" ng-show="errMsg">{{errMsg}}</div>
       </div>
-      <div class+'form-group'>
-        <input type="file" name="avatar" id="avatarUploader"/>
-      </div>
-      <div class="form-group">
+      <!--<div class="form-group">
         <p class="text-danger" ng-show="form.fullname.$dirty && form.fullname.$error.required">Fullname is required</p>
         <input type="text" name="fullname" ng-model="signupForm.fullname" class="form-control" placeholder="Enter fullname" required>
-      </div>
+      </div> -->
       <div class="form-group">
         <p class="text-danger" ng-show="form.username.$dirty && form.username.$error.required">Username is required</p>
         <p class="text-danger" ng-show="form.username.$dirty && form.username.$error.minlength">Username must have at least 2 characters.</p>

@@ -3,10 +3,16 @@ var adminHandler=require('./controller/controller.admin.js');
 var bizErrorHandler=require('./controller/controller.bizerror.js');
 
 module.exports=function(app){
+  app.use(function(req,res,next){
+    if(req.session && req.session.isAuthenticated)
+      return res.status(302).redirect('http://localhost:3000');
+
+    return next();
+  })
+
   app.route('/')
       .get(function(req,res,next){
         console.log("Getting index file");
-        res.cookie('test-cookie','dummy cookie value');
         res.sendFile('index.html',app.get('routePath'));
       })
 
@@ -28,6 +34,14 @@ module.exports=function(app){
       .get(function(req,res,next){
         res.status(200);
         res.sendFile('templates/landing/signup.html',app.get('routePath'));
+      })
+
+  app.route('/session/save')
+      .get(function(req,res,next){
+        /*req.session.isAuthenticated=true;
+        req.session.usrId=req.query.id;*/
+
+        res.status(200).end();
       })
 
 

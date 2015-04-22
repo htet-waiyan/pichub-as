@@ -26,7 +26,24 @@
       $http({
         url:'http://localhost:3000/api/login',
         method:'POST',
+        headers:{'X-Customer-Header':'CORS-PREFLIGHT-REQ'},
         data:JSON.stringify(credential)
+      }).success(function(data,status,config){
+        defered.resolve(data);
+      }).error(function(data,status,config){
+        defered.reject(data);
+      })
+
+      return defered.promise;
+    }
+
+    this.saveSession=function(userId){
+      var defered=$q.defer();
+
+      $http({
+        url:'/session/save',
+        method:'GET',
+        params:{id:userId}
       }).success(function(data,status,config){
         defered.resolve(data);
       }).error(function(data,status,config){

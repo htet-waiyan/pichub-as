@@ -17,7 +17,7 @@ module.exports=function(app){
   app.use(cookieParser());
   app.use(session({
     secret:'pichub_secret',
-    name:"jssession_pichub",
+    name:"jssession_pichub-as",
     resave:true,
     saveUninitialized:false,
     cookie:{

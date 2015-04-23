@@ -26,6 +26,7 @@
       ///
       $adminService.doLogin($scope.loginForm)
         .then(function(user){
+          console.log("Login successful");
           return $adminService.saveSession(user._id);
         },function(err){
           console.log("Login failed");

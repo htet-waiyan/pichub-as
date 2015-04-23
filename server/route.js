@@ -13,6 +13,8 @@ module.exports=function(app){
   app.route('/')
       .get(function(req,res,next){
         console.log("Getting index file");
+        console.log(req.cookies);
+        console.log(req.session);
         res.sendFile('index.html',app.get('routePath'));
       })
 
@@ -38,8 +40,8 @@ module.exports=function(app){
 
   app.route('/session/save')
       .get(function(req,res,next){
-        /*req.session.isAuthenticated=true;
-        req.session.usrId=req.query.id;*/
+        req.session.isAuthenticated=true;
+        req.session.usrId=req.query.id;
 
         res.status(200).end();
       })

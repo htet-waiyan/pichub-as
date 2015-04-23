@@ -27,7 +27,8 @@
         url:'http://localhost:3000/api/login',
         method:'POST',
         headers:{'X-Customer-Header':'CORS-PREFLIGHT-REQ'},
-        data:JSON.stringify(credential)
+        data:JSON.stringify(credential),
+        withCredentials:true
       }).success(function(data,status,config){
         defered.resolve(data);
       }).error(function(data,status,config){

@@ -1,8 +1,7 @@
 var MongoClient=require('mongodb').MongoClient;
 var ObjectId=require('mongodb').ObjectID;
-var dbConnecitonFactory=require('./db.confactory').getDBConFactory();
-
-var db=dbConnecitonFactory.getDBInstance();
+/*var dbConnecitonFactory=require('./db.confactory').getDBConFactory();
+var db=dbConnecitonFactory.getDBInstance();*/
 
 function CommonDB(){}
 
